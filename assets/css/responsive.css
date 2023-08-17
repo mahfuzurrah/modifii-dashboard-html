@@ -1,0 +1,25 @@
+@media screen and (max-width: 991px) {
+    .logIn_page {
+      height: 100vh;
+    }
+  
+    .logIn_page .login_form {
+      height: 95vh;
+    }
+  
+    .logIn_page .login_img {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .logIn_page .login_form .login_header{
+        flex-wrap: wrap;
+    }
+
+    .custom-selector {
+        max-width: 100%;
+        width: 100vw;
+    }
+  }
+  
