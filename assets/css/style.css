@@ -378,8 +378,8 @@ All pages css start
   text-align: center;
 }
 
-@media screen  and (max-width: 576px){
-  .logIn_page .form_area{
+@media screen and (max-width: 576px) {
+  .logIn_page .form_area {
     width: 100%;
   }
 }
@@ -513,11 +513,11 @@ All pages css start
   justify-content: center;
 }
 
-.logIn_page .login_img .login_banner{
+.logIn_page .login_img .login_banner {
   width: 70%;
 }
 
-.logIn_page .login_banner_text{
+.logIn_page .login_banner_text {
   font-size: 36px;
   margin-right: -80px;
 }
