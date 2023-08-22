@@ -2,8 +2,8 @@
 
 :root {
   /* COLOR */
-  --primary-color: #feb902;
-  --secondary-color: #09a4ef;
+  --primary-color: #09a4ef;
+  --secondary-color: #1155C0;
   --title-color: #101828;
   --description-color: #718096;
   --white-color: #ffffff;
@@ -43,7 +43,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
-  background: #fafafa;
+  background: #FAFAFA;
 }
 
 h1,
@@ -147,12 +147,21 @@ input:focus {
   box-shadow: none;
 }
 
-/* Common css */
+.body_container {
+  width: 100%;
+  height: 100%;
+  padding-left: 260px;
+  padding-right: 10px;
+
+}
 
 .container-fluid {
   width: 100%;
   height: 100%;
   padding: 20px;
+  background: #EDF2F7;
+  /* margin-top: 20px; */
+  border-radius: 24px;
 }
 
 .breadcrumb_list {
@@ -180,7 +189,7 @@ input:focus {
 
 .btn {
   padding: 12px 25px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--white-color);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -236,8 +245,8 @@ input:focus {
 
 .btn_s:hover,
 .btn:hover {
-  background: var(--primary-color);
-  color: var(--title-color);
+  background: #1155C0;
+  color: var(--white-color);
   border: 1px solid transparent !important;
 }
 
@@ -298,9 +307,40 @@ input:focus {
   margin-right: 10px !important;
 }
 
+
+
+/* ===============
+All Navar CSS 
+================= */
+
+.nav_list_area {
+  margin-top: 50px;
+}
+
+.side_navbar .nav_list_area .menu_list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.side_navbar .nav_list_area .menu_list .nav_list a {
+  display: flex;
+  align-items: center;
+  gap: 12px !important;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.side_navbar .nav_list_area .menu_list .nav_list a path {
+  fill: #FF0000;
+}
+
+
 /* +++++++++++++
 All pages css start
 ++++++++++++++++ */
+
 
 /* =============== LogIn Page CSS ================= */
 
@@ -396,7 +436,7 @@ All pages css start
   padding: 12px 16px;
 }
 
-.custom-selector .selector-header span{
+.custom-selector .selector-header span {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -430,16 +470,16 @@ All pages css start
   background-color: #f0f0f0;
 }
 
-.custom-selector .icons{
+.custom-selector .icons {
   transition: all 0.5s ease-in-out;
 }
 
-.custom-selector .rotate-icon{
+.custom-selector .rotate-icon {
   rotate: 180deg;
   transition: all 0.5s ease-in-out;
 }
 
-#password-toggle{
+#password-toggle {
   color: var(--title-color)
 }
 
@@ -455,7 +495,8 @@ All pages css start
 .logIn_page .login_img {
   width: 100%;
   height: 100%;
-  background: #1A202C;
+  /* background: var(bo); */
+  /* background: #1A202C; */
   /* background: #edf2f7; */
   border-radius: 12px;
   display: flex;
@@ -464,40 +505,42 @@ All pages css start
   justify-content: center;
 }
 
-.logIn_page .login_banner_text{
+.logIn_page .login_banner_text {
   width: 480px;
   text-align: center;
   margin-top: 80px;
   padding: 0 20px;
 }
 
-.logIn_page .login_banner_text h2{
-  color: var(--white-color);
+.logIn_page .login_banner_text h2 {
+  color: var(--title-color);
+  /* color: var(--white-color); */
 }
 
-.logIn_page .login_banner_text p{
+.logIn_page .login_banner_text p {
   margin-top: 24px;
-  color: var(--white-color);
+  color: var(--description-color);
+  /* color: var(--white-color); */
 }
 
 
-.logIn_page .input_item{
+.logIn_page .input_item {
   margin-top: 24px;
   display: flex;
   align-items: center;
-  
+
 }
 
-.logIn_page .input_item.password{
+.logIn_page .input_item.password {
   position: relative;
 }
 
-.logIn_page .input_item.password input{
+.logIn_page .input_item.password input {
   position: relative;
   padding-right: 50px;
 }
 
-.logIn_page .input_item.password .icons{
+.logIn_page .input_item.password .icons {
   position: absolute;
   right: 16px;
   color: var(--description-color) !important
@@ -516,3 +559,46 @@ All pages css start
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
+
+/* ============
+Said Navbar
+=========== */
+.side_navbar {
+  background: #FAFAFA;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10 !important;
+}
+
+.side_navbar .toggle_icon {
+  display: none;
+}
+
+.side_navbar .logo {
+  height: 30px;
+}
+
+
+
+/* ============
+Top Navbar
+=========== */
+
+.top_navbar {
+  width: 100%;
+  background: #FAFAFA;
+  position: sticky;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 32px;
+  z-index: 1;
+  border: 1px solid #CBD5E0;
+  border-radius: 12px;
+}

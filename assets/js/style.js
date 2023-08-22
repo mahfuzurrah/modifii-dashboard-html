@@ -1,52 +1,49 @@
-// Password selector
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleIcon = document.getElementById('toggle_icon');
+  const sideNavbar = document.getElementById('side_navbar');
 
-const selector = document.getElementById("custom-selector");
-const selectorHeader = document.querySelector(".selector-header");
-const selectorIcon = document.getElementById("r_icon");
-const selectedOptionPlaceholder = document.getElementById("selected-option");
-const optionsList = document.getElementById("options-list");
-const options = document.querySelectorAll(".option");
+  toggleIcon.addEventListener('click', () => {
+    sideNavbar.classList.toggle('active');
+  });
+});
 
-const toggleOptions = () => {
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("custom-selector");
+  const selectorHeader = selector.querySelector(".selector-header");
+  const selectorIcon = selector.querySelector("#r_icon");
+  const selectedOptionPlaceholder = selector.querySelector("#selected-option");
+  const optionsList = selector.querySelector("#options-list");
+  const options = Array.from(optionsList.getElementsByClassName("option"));
+
+  selectorHeader.addEventListener("click", () => {
     optionsList.classList.toggle("options-list-visible");
     selectorIcon.classList.toggle("rotate-icon");
-};
+  });
 
-selectorHeader.addEventListener("click", toggleOptions);
-
-document.addEventListener("click", event => {
+  document.addEventListener("click", event => {
     if (!selector.contains(event.target)) {
-        optionsList.classList.remove("options-list-visible");
-        selectorIcon.classList.remove("rotate-icon");
+      optionsList.classList.remove("options-list-visible");
+      selectorIcon.classList.remove("rotate-icon");
     }
-});
+  });
 
-options.forEach(option => {
+  options.forEach(option => {
     option.addEventListener("click", () => {
-        selectedOptionPlaceholder.textContent = option.textContent;
-        toggleOptions();
+      selectedOptionPlaceholder.textContent = option.textContent;
+      optionsList.classList.remove("options-list-visible");
+      selectorIcon.classList.remove("rotate-icon");
     });
+  });
+
+  selectedOptionPlaceholder.textContent = options[0].textContent;
+
+  const passwordInput = document.getElementById("password-input");
+  const passwordToggle = document.getElementById("password-toggle");
+
+  passwordToggle.addEventListener("click", () => {
+    passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+    passwordToggle.classList.toggle("bx-hide");
+    passwordToggle.classList.toggle("bx-show");
+  });
 });
-
-// Initialize the selected value to the first option
-selectedOptionPlaceholder.textContent = options[0].textContent;
-
-
-// Password toggle
-
-const passwordInput = document.getElementById("password-input");
-const passwordToggle = document.getElementById("password-toggle");
-
-passwordToggle.addEventListener("click", () => {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    passwordToggle.classList.remove("bx-hide");
-    passwordToggle.classList.add("bx-show");
-  } else {
-    passwordInput.type = "password";
-    passwordToggle.classList.remove("bx-show");
-    passwordToggle.classList.add("bx-hide");
-  }
-});
-
-
