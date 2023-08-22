@@ -373,12 +373,20 @@ All pages css start
 }
 
 .logIn_page .form_area {
-  max-width: 500px;
+  width: 500px;
   text-align: center;
 }
 
-.logIn_page .form_area h1 {
-  font-size: 40px;
+@media screen  and (max-width: 576px){
+  .logIn_page .form_area{
+    width: 100%;
+  }
+}
+
+.logIn_page .form_area h3 {
+  text-align: justify;
+  font-size: 24px;
+  margin-left: 5px;
 }
 
 .logIn_page .form_area .desc {
@@ -558,10 +566,6 @@ All pages css start
 /*  */
 .logIn_page .btn{
   background: #432CF3;
-}
-
-.logIn_page .form_area{
-  width: 450px;
 }
 
 .log_img{
