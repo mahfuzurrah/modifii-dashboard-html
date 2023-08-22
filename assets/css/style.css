@@ -409,6 +409,7 @@ All pages css start
 .logIn_page .form_area .fuP {
   font-weight: var(--font-medium);
   color: var(--secondary-color);
+  text-decoration: underline !important;
 }
 
 .logIn_page .form_area .btn {
