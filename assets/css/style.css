@@ -43,7 +43,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
-  background: #FAFAFA;
+  background: #ffffff !important;
 }
 
 h1,
@@ -159,7 +159,7 @@ input:focus {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: #EDF2F7;
+  /* background: #EDF2F7; */
   /* margin-top: 20px; */
   border-radius: 24px;
 }
@@ -348,6 +348,7 @@ All pages css start
   padding-right: 0;
   width: 100%;
   height: 100vh !important;
+  background: var(--white-color) !important;
 }
 
 .logIn_page .row {
@@ -545,6 +546,37 @@ All pages css start
   right: 16px;
   color: var(--description-color) !important
 }
+
+
+
+
+
+
+
+
+
+/*  */
+.logIn_page .btn{
+  background: #432CF3;
+}
+
+.logIn_page .form_area{
+  width: 450px;
+}
+
+.log_img{
+  width: 70%;
+}
+
+.aa_text{
+  font-size: 36px;
+  margin-right: -80px;
+}
+
+/*  */
+
+
+
 
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
