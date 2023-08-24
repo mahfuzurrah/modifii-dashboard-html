@@ -26,12 +26,12 @@
     height: 100vh;
   }
 
-  .form_area{
+  .logIn_page .form_area{
     margin-top: 50px;
   }
 
   .logIn_page .login_form .logIn_footer{
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .logIn_page .login_img {
