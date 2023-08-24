@@ -356,14 +356,6 @@ All pages css start
   height: 100%;
 }
 
-/* .logIn_page .login_form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-} */
 
 .logIn_page .login_header {
   display: flex;
