@@ -26,9 +26,13 @@
     height: 100vh;
   }
 
-  /* .logIn_page .login_form {
-    height: 70vh;
-  } */
+  .form_area{
+    margin-top: 30px;
+  }
+
+  .logIn_page .login_form .logIn_footer{
+    margin-top: 50px;
+  }
 
   .logIn_page .login_img {
     display: none;
