@@ -22,16 +22,8 @@
   }
 
   /* ====Login Page===== */
-  .logIn_page {
-    height: 100vh;
-  }
-
-  .logIn_page .form_area{
-    margin-top: 50px;
-  }
-
-  .logIn_page .login_form .logIn_footer{
-    margin-top: 100px;
+  .logIn_page{
+    height: 80vh !important;
   }
 
   .logIn_page .login_img {
@@ -40,7 +32,8 @@
 }
 
 @media screen and (max-width: 450px) {
-  .logIn_page .login_form .login_header {
+
+  .logIn_page .login_header {
     flex-wrap: wrap;
   }
 
