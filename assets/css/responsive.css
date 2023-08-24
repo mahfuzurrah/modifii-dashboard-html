@@ -16,14 +16,18 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .side_navbar.active{
+  .side_navbar.active {
     left: 0;
     transition: all 0.5s ease-in-out;
   }
 
   /* ====Login Page===== */
-  .logIn_page{
+  .logIn_page {
     height: 80vh !important;
+  }
+
+  .logIn_footer {
+    margin-top: -50px;
   }
 
   .logIn_page .login_img {
