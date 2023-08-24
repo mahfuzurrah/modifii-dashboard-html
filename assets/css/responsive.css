@@ -26,9 +26,9 @@
     height: 100vh;
   }
 
-  .logIn_page .login_form {
-    height: 95vh;
-  }
+  /* .logIn_page .login_form {
+    height: 70vh;
+  } */
 
   .logIn_page .login_img {
     display: none;
