@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// custom-selector
 
 document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("custom-selector");
@@ -30,13 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   options.forEach(option => {
     option.addEventListener("click", () => {
-      selectedOptionPlaceholder.textContent = option.textContent;
+      const flagImg = option.querySelector("img").outerHTML;
+      const optionText = option.textContent;
+      selectedOptionPlaceholder.innerHTML = `${flagImg} ${optionText}`;
       optionsList.classList.remove("options-list-visible");
       selectorIcon.classList.remove("rotate-icon");
     });
   });
 
-  selectedOptionPlaceholder.textContent = options[0].textContent;
+  const defaultOption = options[0];
+  const defaultFlagImg = defaultOption.querySelector("img").outerHTML;
+  const defaultOptionText = defaultOption.textContent;
+  selectedOptionPlaceholder.innerHTML = `${defaultFlagImg} ${defaultOptionText}`;
+
+
+// password-toggle
 
   const passwordInput = document.getElementById("password-input");
   const passwordToggle = document.getElementById("password-toggle");
