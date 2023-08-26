@@ -3,8 +3,8 @@
 :root {
   /* COLOR */
   --primary-color: #09a4ef;
-  --secondary-color: #1155C0;
-  --btn-color: #432CF3;
+  --secondary-color: #1155c0;
+  --btn-color: #432cf3;
   --title-color: #101828;
   --description-color: #718096;
   --white-color: #ffffff;
@@ -44,7 +44,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--title-color);
-  background: #ffffff !important;
+  background: #fafafa !important;
 }
 
 h1,
@@ -94,7 +94,7 @@ a {
 }
 
 hr {
-  border: 1px solid var(--border-color);
+  border: 1px solid #475467;
 }
 
 img {
@@ -104,7 +104,7 @@ img {
 
 .icons {
   font-size: 24px;
-  color: var(--description-color);
+  color: #5d6a83;
 }
 
 .button {
@@ -141,6 +141,34 @@ label {
   border: none;
 }
 
+.amin{
+  height: 100vh;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0 !important;
+}
+
+.breadcrumb .breadcrumb-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb .breadcrumb-menu .list a {
+  padding: 4px 8px;
+  font-size: var(--small-font-size);
+  border-radius: 6px
+}
+
+.breadcrumb .breadcrumb-menu .list a.active {
+  background: #e8edff;
+  color: #09a4ef;
+}
+
 /* Common css */
 input:focus {
   border: 1px solid var(--secondary-color) !important;
@@ -150,43 +178,20 @@ input:focus {
 
 .body_container {
   width: 100%;
-  height: 100%;
-  padding-left: 260px;
+  height: calc(100vh - 100px);
+  padding-left: 280px;
   padding-right: 10px;
-
 }
 
 .container-fluid {
   width: 100%;
   height: 100%;
   padding: 20px;
-  /* background: #EDF2F7; */
-  /* margin-top: 20px; */
+  background: #EDF2F7;
+  margin-top: 20px;
   border-radius: 24px;
 }
 
-.breadcrumb_list {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.breadcrumb_list li {
-  list-style: none;
-  cursor: pointer;
-  line-height: normal;
-}
-
-.breadcrumb_list li.active {
-  padding: 4px 8px;
-  background: #e8edff;
-  color: var(--secondary-color);
-  border-radius: 6px;
-}
-
-.breadcrumb_list .icons {
-  font-size: 24px;
-}
 
 .btn {
   padding: 12px 25px;
@@ -246,7 +251,7 @@ input:focus {
 
 .btn_s:hover,
 .btn:hover {
-  background: #1155C0;
+  background: #1155c0;
   color: var(--white-color);
   border: 1px solid transparent !important;
 }
@@ -308,20 +313,45 @@ input:focus {
   margin-right: 10px !important;
 }
 
-
-
 /* ===============
 All Navar CSS 
 ================= */
+/* Said Navbar */
 
-.nav_list_area {
+.side_navbar {
+  background: #fafafa;
+  width: 280px;
+  height: 100vh;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10 !important;
+}
+
+.side_navbar .toggle_icon {
+  display: none;
+}
+
+.side_navbar .logo {
+  height: 30px;
+}
+
+.side_navbar .nav_list_area {
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
 }
 
 .side_navbar .nav_list_area .menu_list {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  width: 100%;
 }
 
 .side_navbar .nav_list_area .menu_list .nav_list a {
@@ -334,14 +364,231 @@ All Navar CSS
 }
 
 .side_navbar .nav_list_area .menu_list .nav_list a path {
-  fill: #FF0000;
+  fill: #ff0000;
+}
+
+.complite_profile {
+  padding: 16px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.complite_profile p,
+.complite_profile span {
+  color: var(--white-color) !important;
+  font-size: var(--small-font-size);
+}
+
+.complite_profile p.title {
+  font-weight: 500;
+  font-size: var(--small-font-size);
+}
+
+.complite_profile span {
+  margin-top: 8px;
+}
+
+.complite_profile span a {
+  font-weight: 500;
+  color: var(--white-color) !important;
+  margin-left: 10px;
+  font-size: var(--small-font-size);
+}
+
+.complite_profile .ant-progress-inner {
+  width: 64px !important;
+  height: 64px !important;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.complite_profile .ant-progress-text {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--white-color) !important;
+}
+
+.complite_profile p {
+  color: var(--gray-200);
+  font-size: var(--small-font-size);
+}
+
+.progress_bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.progress_bar .percent {
+  position: relative;
+}
+
+.progress_bar svg {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  transform: rotate(-90deg);
+}
+
+.progress_bar svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #96a3be;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+.progress_bar svg circle:last-of-type {
+  stroke-dasharray: 176px;
+  stroke-dashoffset: calc(176px - (176px * var(--percent)) / 100);
+  stroke: #3498db;
+}
+
+.progress_bar .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress_bar .number p {
+  color: var(--white-color);
+}
+
+.progress_bar:nth-child(1) svg circle:last-of-type {
+  stroke: var(--white-color);
+}
+
+.sidenav_user,
+.sidenav_user .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.sidenav_user .user p span {
+  font-size: var(--small-font-size);
+  color: var(--description-color);
+}
+
+.sidenav_user .user p {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.sidenav_user .user p.gmail {
+  color: var(--description-color);
+  font-weight: 400;
+}
+
+.sidenav_user .user_img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100px;
+}
+
+.sidenav_user .logout_icon {
+  rotate: -90deg;
+  font-size: 24px;
+}
+
+/* Top Navbar */
+
+.top_navbar {
+  width: 100%;
+  background: #fafafa;
+  position: sticky;
+  top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 32px;
+  z-index: 1;
+  border: 1px solid #cbd5e0;
+  border-radius: 12px;
+}
+
+.topbar_nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 30px;
+  width: 100%;
+}
+
+.right_nav_item,
+.top_nav_icon_list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.top_nav_icon_list img {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.header_toggle_btn {
+  margin-left: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  min-width: 50px;
+  min-height: 50px;
+  background: #0000001a;
+}
+
+.top_nav_sell_btn {
+  padding: 5px 10px;
+  background: #1a202c;
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: normal;
+  border-radius: 8px;
+  min-width: max-content;
 }
 
 
-/* +++++++++++++
-All pages css start
-++++++++++++++++ */
+.top_nav_sell_btn img {
+  min-width: 10px !important;
+  min-height: 10px !important;
+}
 
+.header_toggle_btn .icons {
+  font-size: 30px !important;
+  color: var(--title-color)
+}
+
+.header_toggle_btn:hover {
+  background: none !important;
+}
+
+.right_nav_item .T_mobile {
+  padding-left: 30px;
+  border-left: 1px solid var(--border-color);
+  line-height: normal;
+}
+
+/*=============================================================
+ ==============================================================
+All pages css start
+===============================================================
+==============================================================*/
 
 /* =============== LogIn Page CSS ================= */
 
@@ -355,7 +602,6 @@ All pages css start
 .logIn_page .row {
   height: 100%;
 }
-
 
 .logIn_page .login_header {
   display: flex;
@@ -453,13 +699,13 @@ All pages css start
   border-radius: 12px;
 }
 
-.custom-selector .options-list .option{
+.custom-selector .options-list .option {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.custom-selector .selected-option{
+.custom-selector .selected-option {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -490,7 +736,7 @@ All pages css start
 }
 
 #password-toggle {
-  color: var(--title-color)
+  color: var(--title-color);
 }
 
 .logIn_page .logIn_footer {
@@ -537,12 +783,10 @@ All pages css start
   color: var(--description-color);
 }
 
-
 .logIn_page .input_item {
   margin-top: 24px;
   display: flex;
   align-items: center;
-
 }
 
 .logIn_page .input_item.password {
@@ -557,63 +801,134 @@ All pages css start
 .logIn_page .input_item.password .icons {
   position: absolute;
   right: 16px;
-  color: var(--description-color) !important
+  color: var(--description-color) !important;
 }
 
+/* =============== Dashboard Page ================= */
 
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
-/* =============== LogIn Page CSS ================= */
+.dashboard_page .section_title .text_area h1 {
+  font-size: 30px;
+  font-family: var(--body-font);
+  font-weight: 500;
+}
 
-/* ============
-Said Navbar
-=========== */
-.side_navbar {
-  background: #FAFAFA;
-  width: 250px;
-  height: 100vh;
+.dashboard_page .section_title .btn_area .icons{
+color: var(--white-color) ;
+font-size: 20px;
+}
+
+.dashboard_page .all_card_group {
+  margin-top: 32px;
   padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10 !important;
+  background: var(--white-color);
+  border-radius: 16px;
 }
 
-.side_navbar .toggle_icon {
-  display: none;
-}
-
-.side_navbar .logo {
-  height: 30px;
-}
-
-
-
-/* ============
-Top Navbar
-=========== */
-
-.top_navbar {
-  width: 100%;
-  background: #FAFAFA;
-  position: sticky;
-  top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 16px 32px;
-  z-index: 1;
-  border: 1px solid #CBD5E0;
+.dashboard_page .all_card_group .card {
   border-radius: 12px;
+  background: #b5e4ca40;
+  padding: 16px;
 }
+
+.dashboard_page .all_card_group .card h1 {
+  font-family: var(--title-font);
+  font-weight: 800;
+}
+
+.dashboard_page .all_card_group .card .card_icons {
+  margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #1a1d1f;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard_page .all_card_group .card .card_icons svg {
+  font-size: 20px;
+  color: var(--white-color);
+}
+
+.dashboard_page .all_card_group .card .card-body h1 {
+  margin: 5px 0;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_sm_title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard_page .all_card_group .card .card-body p {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text p {
+  display: flex;
+  align-items: center;
+  background: var(--white-color);
+  width: max-content;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .up {
+  color: #83bf6e;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .down {
+  color: #ff6a55;
+}
+
+.dashboard_page .all_card_group .row {
+  row-gap: 20px;
+}
+
+.dashboard_page .all_card_group .d_card_1 {
+  background: #b5e4ca40;
+}
+
+.dashboard_page .all_card_group .d_card_2 {
+  background: #bdffd040;
+}
+
+.dashboard_page .all_card_group .d_card_3 {
+  background: #bdffd040;
+}
+
+.dashboard_page .all_card_group .d_card_4 {
+  background: #fce2b140;
+}
+
+.dashboard_page .all_card_group .d_card_5 {
+  background: #dde4b540;
+}
+
+.dashboard_page .all_card_group .d_card_6 {
+  background: #fcb1ec40;
+}
+
+.dashboard_page .all_card_group .d_card_7 {
+  background: #cabdff40;
+}
+
+.dashboard_page .all_card_group .d_card_8 {
+  background: #fcb1b140;
+}
+
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
+/* =============== LogIn Page CSS ================= */
