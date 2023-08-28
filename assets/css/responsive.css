@@ -3,7 +3,7 @@
     padding-left: 10px;
   }
 
-  /* ====Navbar===== */
+  /*ide Navbar*/
   .side_navbar .toggle_icon {
     display: block;
     position: absolute;
@@ -14,6 +14,7 @@
   .side_navbar {
     left: -100%;
     transition: all 0.5s ease-in-out;
+    z-index: 9999 !important;
   }
 
   .side_navbar.active {
@@ -21,7 +22,16 @@
     transition: all 0.5s ease-in-out;
   }
 
-  /* ====Login Page===== */
+  /* Top Navbar */
+  .top_navbar {
+    position: sticky !important;
+  }
+
+  .top_navbar .toggle_icon{
+    display: block;
+  }
+
+  /*Login Page*/
   .logIn_page {
     height: 80vh !important;
   }
@@ -31,6 +41,26 @@
   }
 
   .logIn_page .login_img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .breadcrumb {
+    display: none;
+  }
+  .right_nav_item{
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  
+}
+
+@media screen and (max-width: 576px) {
+  .right_nav_item .T_mobile{
     display: none;
   }
 }

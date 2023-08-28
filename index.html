@@ -1,173 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Page</title>
     <!-- CSS Links -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/apexcharts.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <!-- Side Navbar -->
-        <div class="side_navbar" id="side_navbar">
-            <div class="logo_area">
-                <a href="index.html"><img class="logo" src="assets/img/icons/Logo.svg" alt="Logo" /></a>
-            </div>
-            <div class="nav_list_area">
-                <ul class="menu_list">
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="lucide:bar-chart-2" class="icons"></iconify-icon>Dashboard
-                        </a>
-                    </li>
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="ant-design:user-outlined" class="icons"></iconify-icon>Products
-                        </a>
-                    </li>
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="material-symbols:dashboard-customize-outline-rounded" class="icons">
-                            </iconify-icon>Products
-                        </a>
-                    </li>
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="tabler:users" class="icons"></iconify-icon>User Management
-                        </a>
-                    </li>
-                    <hr />
-                    <ul>
-                        <li class="nav_list">
-                            <a href="#">
-                                <iconify-icon icon="icon-park-outline:down" class="icons"></iconify-icon>See All
-                            </a>
-                        </li>
-                    </ul>
-                </ul>
-                <ul class="menu_list">
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="lucide:bar-chart-2" class="icons"></iconify-icon>Support
-                        </a>
-                    </li>
-                    <li class="nav_list">
-                        <a href="">
-                            <iconify-icon icon="tabler:settings" class="icons"></iconify-icon>Settings
-                        </a>
-                    </li>
-                    <div class="complite_profile">
-                        <div class="progress_bar">
-                            <div class="percent">
-                                <svg>
-                                    <circle cx="32" cy="32" r="28"></circle>
-                                    <circle cx="32" cy="32" r="28" style="--percent: 75"></circle>
-                                </svg>
-                                <div class="number">
-                                    <p>75<span>%</span></p>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="title">Complete Profile</p>
-                        <p>Let’s empower your financial task today with Findash.</p>
-                        <span>
-                            Dismiss
-                            <a href="#">Go to Profile</a>
-                        </span>
-                    </div>
-                    <hr />
-                    <div class="sidenav_user">
-                        <div class="user">
-                            <img src="assets/img/Avatar/user.png" alt="" class="user_img" />
-                            <span>
-                                <p class="name">Daniel Rhye</p>
-                                <p class="gmail">daniel@creo.com</p>
-                            </span>
-                        </div>
-                        <a href="">
-                            <iconify-icon icon="ic:outline-logout" class="icons"></iconify-icon>
-                        </a>
-                    </div>
-                </ul>
-            </div>
+      <!-- Side Navbar -->
+      <div class="side_navbar" id="side_navbar">
+        <div class="logo_area">
+          <a href="index.html"
+            ><img class="logo" src="assets/img/icons/Logo.svg" alt="Logo"
+          /></a>
         </div>
-        <div class="body_container">
-            <!-- Top Navbar -->
-            <div class="top_navbar">
-                <div class="topbar_nav_item">
-                    <div class="breadcrumb">
-                        <iconify-icon icon="lucide:bar-chart-2" class="icons"></iconify-icon>
-                        <iconify-icon icon="ic:round-navigate-next" class="icons"></iconify-icon>
-                        <ul class="breadcrumb-menu">
-                            <li class="list"><a href="" class="active">Dashboard</a></li>
-                        </ul>
-                    </div>
-                    <div class="right_nav_item">
-                        <ul class="top_nav_icon_list">
-                            <li>
-                                <a href="#">
-                                    <img src="assets/img/icons/Download.svg" alt="Download" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/img/icons/AddSquare.svg" alt="AddSquare" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/img/icons/calculator.svg" alt="Calculator" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="assets/img/icons/moneyBlack.svg" alt="Money" />
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="top_nav_sell_btn">
-                                    <img src="assets/img/icons/AddCategory.svg" alt="AddC" /> Sale Now
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="T_mobile">
-                            <img src="assets/img/icons/T-Mobile_logo.svg" alt="" />
-                        </div>
-                        <div class="toggle_icon" id="toggle_icon">
-                            <i class="bx bx-menu-alt-left icons"></i>
-                        </div>
-                    </div>
+        <div class="nav_list_area">
+          <ul class="menu_list">
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon
+                  icon="lucide:bar-chart-2"
+                  class="icons"
+                ></iconify-icon
+                >Dashboard
+              </a>
+            </li>
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon
+                  icon="ant-design:user-outlined"
+                  class="icons"
+                ></iconify-icon
+                >Products
+              </a>
+            </li>
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon
+                  icon="material-symbols:dashboard-customize-outline-rounded"
+                  class="icons"
+                >
+                </iconify-icon
+                >Products
+              </a>
+            </li>
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon icon="tabler:users" class="icons"></iconify-icon
+                >User Management
+              </a>
+            </li>
+            <hr />
+            <ul>
+              <li class="nav_list">
+                <a href="#">
+                  <iconify-icon
+                    icon="icon-park-outline:down"
+                    class="icons"
+                  ></iconify-icon
+                  >See All
+                </a>
+              </li>
+            </ul>
+          </ul>
+          <ul class="menu_list">
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon
+                  icon="lucide:bar-chart-2"
+                  class="icons"
+                ></iconify-icon
+                >Support
+              </a>
+            </li>
+            <li class="nav_list">
+              <a href="">
+                <iconify-icon
+                  icon="tabler:settings"
+                  class="icons"
+                ></iconify-icon
+                >Settings
+              </a>
+            </li>
+            <div class="complite_profile">
+              <div class="progress_bar">
+                <div class="percent">
+                  <svg>
+                    <circle cx="32" cy="32" r="28"></circle>
+                    <circle
+                      cx="32"
+                      cy="32"
+                      r="28"
+                      style="--percent: 75"
+                    ></circle>
+                  </svg>
+                  <div class="number">
+                    <p>75<span>%</span></p>
+                  </div>
                 </div>
+              </div>
+              <p class="title">Complete Profile</p>
+              <p>Let’s empower your financial task today with Findash.</p>
+              <span>
+                Dismiss
+                <a href="#">Go to Profile</a>
+              </span>
             </div>
-            <div class="container-fluid">
-                <div class="dashboard_page">
-                    <div class="section_title">
-                        <div class="text_area">
-                          <h1>Welcome back, Daniel</h1>
-                          <p>Track, manage and forecast your customers and orders.</p>
-                        </div>
-                        <div class="btn_area">
-                          <DatePicker
-                            onChange={onChange}
-                            placeholder="Filter Date"
-                            class="date_picker"
-                          />
-                          <button class="btn_b">
-                            <iconify-icon icon="majesticons:edit-pen-2-line" class="icons"></iconify-icon>
-                            Edit Widgets
-                          </button>
-                        </div>
+            <hr />
+            <div class="sidenav_user">
+              <div class="user">
+                <img src="assets/img/Avatar/user.png" alt="" class="user_img" />
+                <span>
+                  <p class="name">Daniel Rhye</p>
+                  <p class="gmail">daniel@creo.com</p>
+                </span>
+              </div>
+              <a href="">
+                <iconify-icon
+                  icon="ic:outline-logout"
+                  class="icons"
+                ></iconify-icon>
+              </a>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="body_container">
+        <!-- Top Navbar -->
+        <div class="top_navbar">
+          <div class="topbar_nav_item">
+            <div class="breadcrumb">
+              <iconify-icon
+                icon="lucide:bar-chart-2"
+                class="icons"
+              ></iconify-icon>
+              <iconify-icon
+                icon="ic:round-navigate-next"
+                class="icons"
+              ></iconify-icon>
+              <ul class="breadcrumb-menu">
+                <li class="list"><a href="" class="active">Dashboard</a></li>
+              </ul>
+            </div>
+            <div class="right_nav_item">
+              <ul class="top_nav_icon_list">
+                <li>
+                  <a href="#">
+                    <img src="assets/img/icons/Download.svg" alt="Download" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/icons/AddSquare.svg" alt="AddSquare" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="assets/img/icons/calculator.svg"
+                      alt="Calculator"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/img/icons/moneyBlack.svg" alt="Money" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="top_nav_sell_btn">
+                    <img src="assets/img/icons/AddCategory.svg" alt="AddC" />
+                    Sale Now
+                  </a>
+                </li>
+              </ul>
+              <div class="T_mobile">
+                <img src="assets/img/icons/T-Mobile_logo.svg" alt="" />
+              </div>
+              <div class="toggle_icon" id="toggle_icon">
+                <i class="bx bx-menu-alt-left icons"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="dashboard_page">
+            <div class="section_title">
+              <div class="text_area">
+                <h1>Welcome back, Daniel</h1>
+                <p>Track, manage and forecast your customers and orders.</p>
+              </div>
+              <div class="btn_area">
+                <input
+                  type="date"
+                  class="date_picker"
+                  placeholder="Filter Date"
+                />
+                <button class="btn_b">
+                  <iconify-icon
+                    icon="majesticons:edit-pen-2-line"
+                    class="icons"
+                  ></iconify-icon>
+                  Edit Widgets
+                </button>
+              </div>
+            </div>
+            <section class="all_card_group">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper dashboard_card">
+                  <div class="swiper-slide card d_card_1">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
                       </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="down">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_2">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_3">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_4">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_5">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_6">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_7">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card d_card_8">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide card">
+                    <div class="card-body">
+                      <div class="card_icons">
+                        <img src="assets/img/icons/shop.svg" alt="" />
+                      </div>
+                      <p>Total Sales</p>
+                      <h1>$128k</h1>
+                      <div class="card_status_text">
+                        <p>
+                          <span class="up">
+                            <iconify-icon
+                              icon="lucide:move-up"
+                              class="icons"
+                            ></iconify-icon>
+                            35.00%
+                          </span>
+                          This week
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </section>
+            <section>
+              <div class="chart_box">
+                <div class="chart_item">
+                  <div class="items left">
+                    <h3>Sales</h3>
+                    <div class="dash_sale_plan">
+                      <button class="d_btn active" id="last30Days">Last 30 Days</button>
+                      <button class="d_btn" id="currentFinancialYear">Current Financial Year</button>
+                  </div>
+                  </div>
+                  <div class="items right">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Open this select menu</option>
+                      <option value="1">2024</option>
+                      <option value="2">2023</option>
+                      <option value="3">2022</option>
+                    </select>
+                    <button class="dot_toggle_btn">
+                      <iconify-icon icon="humbleicons:dots-vertical" class="icons"></iconify-icon>
+                    </button>
+                  </div>
+                </div>
+                <div class="chart_title">
+                  <div class="text_area">
+                    <h1>1,509 orders</h1>
+                    <p class="status">
+                      <span>
+                        <BsArrowUp /> 37.8%
+                      </span>
+                      vs. Sep, 2021
+                    </p>
+                  </div>
+                  <div class="chart_right_content">
+                    <button class="slide_btn">
+                      <iconify-icon icon="teenyicons:arrow-left-solid" class="icons"></iconify-icon>
+                    </button>
+                    <button class="slide_btn">
+                      <iconify-icon icon="teenyicons:arrow-right-solid" class="icons"></iconify-icon>
+                    </button>
+                  </div>
+                </div>
+                <div id="chart"></div>
+              </div>
+            </section>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- JavaScript Area -->
@@ -175,9 +473,11 @@
     <!-- Icons -->
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/apexcharts.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/style.js"></script>
-</body>
-
+  </body>
 </html>

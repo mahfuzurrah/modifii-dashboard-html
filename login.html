@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Page</title>
+    <!-- Css Link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard Page</title>
-  <!-- Css Link -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
-</head>
-
-<body>
-  <div class="logIn_page">
-    <div class="container-fluid">
+  <body>
+    <div class="logIn_page">
       <div class="login_header">
-        <img src="assets/img/icons/Logo.svg" alt="Logo" class="logo" style="height: 40px" />
+        <img
+          src="assets/img/icons/Logo.svg"
+          alt="Logo"
+          class="logo"
+          style="height: 40px"
+        />
         <div class="custom-selector" id="custom-selector">
           <div class="selector-header">
-              <p class="selected-option" id="selected-option">
-                Select a language
-              </p>
+            <p class="selected-option" id="selected-option">
+              Select a language
+            </p>
             <i class="bx bx-chevron-down icons" id="r_icon"></i>
           </div>
           <ul class="options-list" id="options-list">
-            <li class="option"><img src="assets/img/flag/canada.svg" alt="">English</li>
-            <li class="option"><img src="assets/img/flag/french.svg" alt="">French</li>
-            <li class="option"><img src="assets/img/flag/spain.svg" alt="">Spanish</li>
-            <li class="option"><img src="assets/img/flag/india.svg" alt="">Hindi</li>
+            <li class="option">English</li>
+            <li class="option">French</li>
+            <li class="option">Spanish</li>
+            <li class="option">Hindi</li>
           </ul>
         </div>
       </div>
@@ -42,10 +48,21 @@
               </div>
               <form action="" class="input_form">
                 <div class="input_item">
-                  <input type="text" value="" placeholder="Username" class="input_field" />
+                  <input
+                    type="text"
+                    value=""
+                    placeholder="Username"
+                    class="input_field"
+                  />
                 </div>
                 <div class="input_item password">
-                  <input type="password" value="" placeholder="Password" class="input_field" id="password-input" />
+                  <input
+                    type="password"
+                    value=""
+                    placeholder="Password"
+                    class="input_field"
+                    id="password-input"
+                  />
                   <i class="bx bx-hide icons" id="password-toggle"></i>
                 </div>
                 <div class="forget_area">
@@ -55,7 +72,7 @@
                   </span>
                   <a href="#" class="fuP"> Forgot Password? </a>
                 </div>
-                <a href="dashboard.html">
+                <a href="index.html">
                   <button class="btn">Sign In</button>
                 </a>
               </form>
@@ -65,7 +82,6 @@
         <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="login_img">
             <img src="assets/img/banner.png" class="login_banner" alt="" />
-            <!-- <h1 class="mt-4 login_banner_text">All-in-one Software</h1> -->
           </div>
         </div>
       </div>
@@ -74,16 +90,14 @@
         <p>Copyright © modifii</p>
       </div>
     </div>
-  </div>
 
-  <!-- JavaScript Area-->
+    <!-- JavaScript Area-->
 
-  <script src="assets/js/jquery-3.7.0.min.js"></script>
-  <!-- Icons -->
-  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/style.js"></script>
-</body>
-
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <!-- Icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/style.js"></script>
+  </body>
 </html>

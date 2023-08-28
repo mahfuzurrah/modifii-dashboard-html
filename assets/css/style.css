@@ -141,7 +141,7 @@ label {
   border: none;
 }
 
-.amin{
+.amin {
   height: 100vh;
 }
 
@@ -185,11 +185,12 @@ input:focus {
 
 .container-fluid {
   width: 100%;
-  height: 100%;
-  padding: 20px;
+  /* height: auto; */
+  padding: 32px;
   background: #EDF2F7;
   margin-top: 20px;
   border-radius: 24px;
+  margin-bottom: 20px !important;
 }
 
 
@@ -265,6 +266,7 @@ input:focus {
 
 .btn_area {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
@@ -327,10 +329,6 @@ All Navar CSS
   top: 0;
   left: 0;
   z-index: 10 !important;
-}
-
-.side_navbar .toggle_icon {
-  display: none;
 }
 
 .side_navbar .logo {
@@ -517,6 +515,11 @@ All Navar CSS
   z-index: 1;
   border: 1px solid #cbd5e0;
   border-radius: 12px;
+  z-index: 99;
+}
+
+.top_navbar .toggle_icon {
+  display: none;
 }
 
 .topbar_nav_item {
@@ -593,10 +596,10 @@ All pages css start
 /* =============== LogIn Page CSS ================= */
 
 .logIn_page {
-  padding-right: 0;
+  padding: 30px;
   width: 100%;
   height: 92vh !important;
-  background: var(--white-color) !important;
+  /* background: var(--white-color) !important; */
 }
 
 .logIn_page .row {
@@ -758,9 +761,6 @@ All pages css start
   justify-content: center;
 }
 
-.logIn_page .login_img .login_banner {
-  width: 70%;
-}
 
 .logIn_page .login_banner_text {
   font-size: 36px;
@@ -812,10 +812,26 @@ All pages css start
   font-weight: 500;
 }
 
-.dashboard_page .section_title .btn_area .icons{
-color: var(--white-color) ;
-font-size: 20px;
+.dashboard_page .section_title .btn_area .icons {
+  color: var(--white-color);
+  font-size: 20px;
 }
+
+.dashboard_page .date_picker {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  width: auto;
+}
+
+.dashboard_page .date_picker {
+  font-size: var(--normal-font-size);
+  font-weight: 600;
+  border: none !important;
+}
+
 
 .dashboard_page .all_card_group {
   margin-top: 32px;
@@ -828,6 +844,46 @@ font-size: 20px;
   border-radius: 12px;
   background: #b5e4ca40;
   padding: 16px;
+}
+
+.dashboard_page .swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dashboard_page .swiper-slide {
+  height: calc((100% - 30px) / 2);
+  margin-top: 0 !important
+}
+
+.dashboard_page .swiper-grid-column>.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  row-gap: 30px;
+}
+
+.swiper-button-disabled {
+  display: none !important;
+}
+
+.dashboard_page .swiper-button-prev,
+.dashboard_page .swiper-button-next {
+  min-width: 56px;
+  min-height: 56px;
+  background: var(--white-color) !important;
+  padding: 10px !important;
+  border-radius: 100px;
+  box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dashboard_page .swiper-button-prev:after,
+.dashboard_page .swiper-button-next:after {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--title-color);
 }
 
 .dashboard_page .all_card_group .card h1 {
@@ -876,12 +932,27 @@ font-size: 20px;
   border-radius: 2px;
 }
 
-.dashboard_page .all_card_group .card .card-body .card_status_text .up {
+.dashboard_page .all_card_group .card .card-body .card_status_text span {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text span .icons {
+  font-size: 16px;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .up,
+.dashboard_page .all_card_group .card .card-body .card_status_text .up .icons {
   color: #83bf6e;
 }
 
-.dashboard_page .all_card_group .card .card-body .card_status_text .down {
+.dashboard_page .all_card_group .card .card-body .card_status_text .down,
+.dashboard_page .all_card_group .card .card-body .card_status_text .down .icons {
   color: #ff6a55;
+}
+
+.dashboard_page .all_card_group .card .card-body .card_status_text .down .icons {
+  rotate: 180deg;
 }
 
 .dashboard_page .all_card_group .row {
@@ -893,15 +964,15 @@ font-size: 20px;
 }
 
 .dashboard_page .all_card_group .d_card_2 {
-  background: #bdffd040;
+  background: #B1E5FC40;
 }
 
 .dashboard_page .all_card_group .d_card_3 {
-  background: #bdffd040;
+  background: #BDFFD040;
 }
 
 .dashboard_page .all_card_group .d_card_4 {
-  background: #fce2b140;
+  background: #FCE2B140;
 }
 
 .dashboard_page .all_card_group .d_card_5 {
@@ -917,8 +988,155 @@ font-size: 20px;
 }
 
 .dashboard_page .all_card_group .d_card_8 {
-  background: #fcb1b140;
+  background: #FCB1B140;
 }
+
+
+.chart_box {
+  background: var(--white-color);
+  padding: 30px;
+  margin-top: 32px;
+  border-radius: 16px;
+}
+
+.chart_box .chart_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.chart_box .text_area h1 {
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #272b30;
+}
+
+.chart_box .status span {
+  color: #83bf6e;
+  background: #eafae5;
+  padding: 4px;
+}
+
+.chart_box .chart_right_content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chart_box .chart_right_content .slide_btn {
+  width: 40px;
+  height: 40px;
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart_box .chart_right_content .icons {
+  font-size: 30px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.chart_box .chart_right_content .slide_btn:hover {
+  background: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.chart_box .chart_right_content .slide_btn:hover .icons {
+  color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.chart_box .chart_item .dash_sale_plan {
+  padding: 4px;
+  background: #edf2f7;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.chart_box .chart_item .dash_sale_plan .d_btn {
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #6f767e;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: var(--body-font);
+  background: transparent !important;
+}
+
+.chart_box .chart_item .dash_sale_plan .d_btn.active {
+  background: #1a202c !important;
+  color: var(--white-color) !important;
+  transition: all 0.5s ease-in-out;
+}
+
+.chart_box .chart_item {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 30px;
+}
+
+.chart_box .chart_item .items.left {
+  gap: 56px;
+}
+
+.chart_box .chart_item .items.right .form-select{
+  width: 130px;
+}
+
+.chart_box .chart_item .items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.chart_box .chart_item .items h3 {
+  position: relative;
+  margin-left: 40px;
+  padding: 4px 0;
+}
+
+.chart_box .chart_item .items h3::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  background: #ffbc99;
+  left: -40px;
+  top: 0;
+  border-radius: 8px;
+}
+
+.dot_toggle_btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
 
 /* =============== LogIn Page CSS ================= */
 /* =============== LogIn Page CSS ================= */
