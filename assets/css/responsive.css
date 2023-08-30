@@ -3,6 +3,10 @@
     padding-left: 10px;
   }
 
+  .table_area{
+    margin-top: 30px;
+  }
+
   /*ide Navbar*/
   .side_navbar .toggle_icon {
     display: block;

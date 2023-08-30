@@ -352,6 +352,25 @@ All Navar CSS
   width: 100%;
 }
 
+.side_navbar .nav_list_area .menu_list .nav_list{
+  border-radius: 8px;
+}
+
+.side_navbar .nav_list_area .menu_list .nav_list:hover{
+  background: #317aef15;
+}
+
+.side_navbar .nav_list_area .menu_list .nav_list.active{
+  background: #317BEF33;
+  color: var(--primary-color)
+}
+
+.side_navbar .nav_list_area .menu_list .nav_list.active a,
+.side_navbar .nav_list_area .menu_list .nav_list.active .icons{
+  color: #317CF1
+}
+
+
 .side_navbar .nav_list_area .menu_list .nav_list a {
   display: flex;
   align-items: center;
@@ -1095,7 +1114,7 @@ All pages css start
   gap: 56px;
 }
 
-.chart_box .chart_item .items.right .form-select{
+.chart_box .chart_item .items.right .form-select {
   width: 130px;
 }
 
@@ -1135,6 +1154,39 @@ All pages css start
   text-align: center;
 }
 
+.table_area {
+  padding: 20px;
+  background: var(--white-color);
+  border-radius: 16px;
+}
+
+.table_area .table_header h3{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table_area .table_header h3 .icons{
+  color: var(--primary-color);
+}
+
+.table_area .table_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.table_area th{
+font-size: var(--small-font-size);
+}
+
+.table_area td{
+font-size: var(--small-font-size);
+border: none;
+vertical-align: middle;
+padding: 12px
+}
 
 
 

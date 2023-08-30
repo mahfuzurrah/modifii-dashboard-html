@@ -24,23 +24,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const last30DaysButton = document.getElementById("last30Days");
       const currentFinancialYearButton = document.getElementById("currentFinancialYear");
 
-      if (last30DaysButton && currentFinancialYearButton) {
+      if (last30DaysButton) {
         last30DaysButton.addEventListener("click", () => {
-          last30DaysButton.classList.add("active");
-          currentFinancialYearButton.classList.remove("active");
+          last30DaysButton.classList.toggle("active");
         });
+      }
 
+      if (currentFinancialYearButton) {
         currentFinancialYearButton.addEventListener("click", () => {
-          currentFinancialYearButton.classList.add("active");
-          last30DaysButton.classList.remove("active");
+          currentFinancialYearButton.classList.toggle("active");
         });
-      } else {
-        console.error("Button Click Error: Element not found");
       }
     } catch (error) {
       console.error("Button Click Error:", error);
     }
   };
+  // Call functions to handle interactions
+  toggleSideNavbar();
+  handleButtonClicked();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
 
   // Handle custom selector interactions
   const handleSelectorInteractions = () => {
@@ -70,6 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
+      selector.addEventListener("keydown", (event) => {
+        if (event.keyCode === 27) {
+          // Escape key
+          optionsList.classList.remove("options-list-visible");
+          selectorIcon.classList.remove("rotate-icon");
+        }
+      });
+
       selector.addEventListener("click", (event) => {
         if (event.target.classList.contains("option")) {
           const optionText = event.target.textContent;
@@ -85,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Selector Interaction Error:", error);
     }
   };
+
 
   // Toggle password visibility
   const togglePasswordVisibility = () => {
@@ -106,8 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Call functions to handle interactions
-  toggleSideNavbar();
-  handleButtonClicked();
   handleSelectorInteractions();
   togglePasswordVisibility();
 });
