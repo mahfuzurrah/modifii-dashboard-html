@@ -940,6 +940,9 @@ All pages css start
   font-size: var(--small-font-size);
   font-weight: 600;
   color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .dashboard_page .all_card_group .card .card-body .card_status_text p {

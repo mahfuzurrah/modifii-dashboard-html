@@ -3,6 +3,10 @@
     padding-left: 10px;
   }
 
+  .container-fluid{
+    margin-top: 85px;
+  }
+
   .table_area{
     margin-top: 30px;
   }
@@ -28,7 +32,10 @@
 
   /* Top Navbar */
   .top_navbar {
-    position: sticky !important;
+    position: fixed !important;
+    width: calc(100% - 2%);
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .top_navbar .toggle_icon{
@@ -59,14 +66,62 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .top_navbar {
+    position: fixed !important;
+    width: calc(100% - 3%);
+  }
+}
+
 @media screen and (max-width: 675px) {
   
 }
 
 @media screen and (max-width: 576px) {
+
+  .container-fluid{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .right_nav_item .T_mobile{
     display: none;
   }
+
+.top_nav_icon_list{
+    gap: 16px;
+  }
+
+  .table_body,
+  .chart_area{
+    overflow: auto;
+  }
+
+  .table_body .table{
+  width: 150%;
+}
+  .chart_box #chart{
+    width: 170%;
+  }
+
+  .chart_box .chart_item{
+    display: block !important;
+    position: relative;
+  }
+
+  .chart_box .chart_item .items.left{
+    gap: 20px;
+  }
+
+  .dot_toggle_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .items.right{
+    margin-top: 20px;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -78,5 +133,10 @@
   .custom-selector {
     max-width: 100%;
     width: 100vw;
+  }
+
+  .top_navbar {
+    position: fixed !important;
+    width: calc(100% - 5%);
   }
 }
